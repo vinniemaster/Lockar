@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewCadastro">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="161dp"
+        android:layout_height="38dp"
+        android:text="Novo Cadastro"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <EditText
+        android:id="@+id/EditTxtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nome"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <EditText
+        android:id="@+id/EditTxtTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Telefone"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtName"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <EditText
+        android:id="@+id/EditTxtCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="CPF"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtTel"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <EditText
+        android:id="@+id/EditTxtModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Modelo"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtCPF"
+        tools:layout_editor_absoluteX="102dp" />
+
+    <EditText
+        android:id="@+id/EditTxtPlaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Placa"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtModel"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="213dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="12dp"
+        android:onClick="backtohome"
+        android:text="Cancelar"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="213dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="15dp"
+        android:text="Cadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtPlaca"
+        tools:layout_editor_absoluteX="99dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
