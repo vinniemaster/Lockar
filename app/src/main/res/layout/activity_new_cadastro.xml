@@ -14,65 +14,87 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.086" />
 
     <EditText
         android:id="@+id/EditTxtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nome"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="99dp" />
-
-    <EditText
-        android:id="@+id/EditTxtTel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Telefone"
-        app:layout_constraintTop_toBottomOf="@+id/EditTxtName"
-        tools:layout_editor_absoluteX="99dp" />
-
-    <EditText
-        android:id="@+id/EditTxtCPF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="CPF"
-        app:layout_constraintTop_toBottomOf="@+id/EditTxtTel"
-        tools:layout_editor_absoluteX="99dp" />
-
-    <EditText
-        android:id="@+id/EditTxtModel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="172dp"
+        android:layout_height="37dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/EditTxtTel"
+        android:layout_width="175dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Telefone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtName" />
+
+    <EditText
+        android:id="@+id/EditTxtCPF"
+        android:layout_width="170dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="CPF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtTel" />
+
+    <EditText
+        android:id="@+id/EditTxtModel"
+        android:layout_width="177dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:text="Modelo"
-        app:layout_constraintTop_toBottomOf="@+id/EditTxtCPF"
-        tools:layout_editor_absoluteX="102dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/EditTxtPlaca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Placa"
-        app:layout_constraintTop_toBottomOf="@+id/EditTxtModel"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtModel" />
+
+    <EditText
+        android:id="@+id/editTxtPlaca"
+        android:layout_width="178dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Carroceria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtPlaca" />
 
     <Button
         android:id="@+id/button"
@@ -80,17 +102,20 @@
         android:layout_height="47dp"
         android:layout_marginTop="12dp"
         android:onClick="backtohome"
-        android:text="Cancelar"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        tools:layout_editor_absoluteX="99dp" />
+        android:text="Voltar "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="213dp"
         android:layout_height="47dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="100dp"
         android:text="Cadastrar"
-        app:layout_constraintTop_toBottomOf="@+id/EditTxtPlaca"
-        tools:layout_editor_absoluteX="99dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxtPlaca" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
