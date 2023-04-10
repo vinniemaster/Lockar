@@ -56,4 +56,17 @@ public class CadastroDAO {
         banco.delete("TB_CADASTRO","id = ?",new String[]{c.getId().toString()});
     }
 
+    public long atualizar(Cadastro cad){
+        ContentValues values = new ContentValues();
+        values.put("Nome", cad.getNome());
+        values.put("CPF", cad.getCPF());
+        values.put("Telefone", cad.getTelefone());
+        values.put("Modelo", cad.getModelo());
+        values.put("Placa", cad.getPlaca());
+        values.put("Carroceria", cad.getCarroceria());
+        values.put("Cor", cad.getCor());
+
+
+        return banco.update("TB_CADASTRO",values,"id = ?", new String[]{cad.getId().toString()});
+    }
 }

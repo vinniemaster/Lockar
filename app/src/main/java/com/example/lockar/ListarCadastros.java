@@ -80,4 +80,15 @@ public class ListarCadastros extends AppCompatActivity {
         }).create();
         dialogo.show();
     }
+
+    public void atualizar(MenuItem item){
+        AdapterView.AdapterContextMenuInfo menuinfo =
+                (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
+        Cadastro cadatualizar = cadastros.get(menuinfo.position);
+
+        Intent it = new Intent(this,NewCadastro.class);
+        it.putExtra("cadastro", cadatualizar);
+        startActivity(it);
+    }
 }
