@@ -67,7 +67,7 @@ public class ListarCadastros extends AppCompatActivity {
 
         AlertDialog.Builder dialogo = new AlertDialog.Builder(ListarCadastros.this);
         dialogo.setTitle("Atenção");
-        dialogo.setMessage("Realmente deseja excluir o aluno " + cadexcluir.getNome().toString() + "?");
+        dialogo.setMessage("Realmente deseja excluir o cadastro do(a) " + cadexcluir.getNome().toString() + "?");
         dialogo.setNegativeButton("NÃO", null);
         dialogo.setPositiveButton("SIM", new DialogInterface.OnClickListener() {
             @Override
