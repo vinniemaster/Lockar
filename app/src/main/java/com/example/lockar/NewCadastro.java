@@ -41,20 +41,30 @@ public class NewCadastro extends AppCompatActivity {
     public void Salvar(View v){
         Cadastro c = new Cadastro();
         c.setNome(nome.getText().toString());
-        c.setCPF(Integer.parseInt(cpf.getText().toString()));
-        c.setTelefone(Integer.parseInt(telefone.getText().toString()));
+        c.setCPF(cpf.getText().toString());
+        c.setTelefone(telefone.getText().toString());
         c.setModelo(modelo.getText().toString());
         c.setPlaca(placa.getText().toString());
         c.setCarroceria(carroceria.getText().toString());
         c.setCor(cor.getText().toString());
 
+
         long id = dao.inserir(c);
+
 
         AlertDialog.Builder dialogo = new AlertDialog.Builder(NewCadastro.this);
         dialogo.setTitle("Cadastro Realizado com Sucesso!");
         dialogo.setMessage("Aluno criado com o ID : "+ id);
         dialogo.setNeutralButton("Ok", null);
         dialogo.show();
+
+        nome.setText("");
+        cpf.setText("");
+        telefone.setText("");
+        modelo.setText("");
+        placa.setText("");
+        carroceria.setText("");
+        cor.setText("");
 
 
     }

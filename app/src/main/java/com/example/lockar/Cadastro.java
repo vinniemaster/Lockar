@@ -6,8 +6,8 @@ public class Cadastro implements Serializable {
 
     private Integer Id;
     private String Nome;
-    private Integer Telefone;
-    private Integer CPF;
+    private String Telefone;
+    private String CPF;
     private String Modelo;
     private  String Placa;
     private  String Cor;
@@ -29,19 +29,19 @@ public class Cadastro implements Serializable {
         Nome = nome;
     }
 
-    public Integer getTelefone() {
+    public String getTelefone() {
         return Telefone;
     }
 
-    public void setTelefone(Integer telefone) {
+    public void setTelefone(String telefone) {
         Telefone = telefone;
     }
 
-    public Integer getCPF() {
+    public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(Integer CPF) {
+    public void setCPF(String CPF) {
         this.CPF = CPF;
     }
 
@@ -75,5 +75,10 @@ public class Cadastro implements Serializable {
 
     public void setCarroceria(String carroceria) {
         Carroceria = carroceria;
+    }
+
+    @Override
+    public String toString(){
+        return Nome + ", " + Modelo + ", "+ Cor;
     }
 }

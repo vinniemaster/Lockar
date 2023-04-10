@@ -17,4 +17,9 @@ public class MainActivity extends AppCompatActivity {
         Intent it_newcadastro = new Intent(this, NewCadastro.class );
         startActivity(it_newcadastro);
     }
+
+    public void ListarCadastros(View v){
+        Intent it_list_cadastros = new Intent(this, ListarCadastros.class );
+        startActivity(it_list_cadastros);
+    }
 }
