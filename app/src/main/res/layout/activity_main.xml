@@ -24,7 +24,7 @@
         android:id="@+id/textView2"
         android:layout_width="144dp"
         android:layout_height="86dp"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="64dp"
         android:fontFamily="monospace"
         android:text="Loc"
         android:textAlignment="center"
@@ -50,7 +50,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.133" />

@@ -24,17 +24,17 @@
         android:id="@+id/textViewCor"
         android:layout_width="148dp"
         android:layout_height="32dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="8dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="24dp"
+        android:layout_height="19dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="174dp"
+        android:layout_marginEnd="132dp"
         android:text="Cor"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
         android:id="@+id/textViewCarroce"
         android:layout_width="148dp"
         android:layout_height="32dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="8dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="131dp"
+        android:layout_marginEnd="92dp"
         android:text="Carroceria"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +64,7 @@
         android:id="@+id/textViewPlaca"
         android:layout_width="148dp"
         android:layout_height="32dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="8dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -102,10 +102,10 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="19dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="162dp"
+        android:layout_marginEnd="120dp"
         android:text="Placa"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,7 +127,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="monospace"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/green"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -138,9 +138,8 @@
         android:id="@+id/textView14"
         android:layout_width="137dp"
         android:layout_height="88dp"
-        android:layout_marginStart="3dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginEnd="48dp"
         android:fontFamily="monospace"
         android:text="kar"
         android:textAlignment="center"
@@ -153,11 +152,10 @@
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="144dp"
+        android:layout_width="137dp"
         android:layout_height="88dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="2dp"
         android:fontFamily="monospace"
         android:text="Loc"
         android:textAlignment="center"
@@ -165,7 +163,6 @@
         android:textColor="@color/white"
         android:textSize="75dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/textView14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -188,5 +185,61 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCPF" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="92dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        tools:layout_editor_absoluteX="1dp"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        tools:layout_editor_absoluteX="1dp"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="156dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        tools:layout_editor_absoluteX="1dp"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="212dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        tools:layout_editor_absoluteX="1dp"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="5dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="28dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
