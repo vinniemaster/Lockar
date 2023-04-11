@@ -43,7 +43,24 @@ public class ListarCadastros extends AppCompatActivity {
         listView.setAdapter(adaptador);
 
         registerForContextMenu(listView);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent,View view, int position, long id){
+                Cadastro cadshow = cadastros.get(position);
+                Intent it = new Intent(getApplicationContext(),ShowCadastro.class);
+                it.putExtra("cadastro", cadshow);
+                startActivity(it);
+
+            }
+        });
+
+
+
+
+
     }
+
+
 
     public void backtohome(View v){
         Intent it_backtohome = new Intent(this, MainActivity.class);
