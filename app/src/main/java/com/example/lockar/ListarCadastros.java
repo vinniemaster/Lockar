@@ -38,7 +38,7 @@ public class ListarCadastros extends AppCompatActivity {
 
         cadastrosFiltrados.addAll(cadastros);
 
-        ArrayAdapter<Cadastro> adaptador = new ArrayAdapter<Cadastro>(this, android.R.layout.simple_list_item_1, cadastros);
+        ArrayAdapter<Cadastro> adaptador = new ArrayAdapter<Cadastro>(this, R.layout.linha,cadastros);
 
         listView.setAdapter(adaptador);
 
