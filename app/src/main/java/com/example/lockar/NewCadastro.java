@@ -1,13 +1,18 @@
 package com.example.lockar;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class NewCadastro extends AppCompatActivity {
     private TextView txtvtitle;
@@ -21,15 +26,33 @@ public class NewCadastro extends AppCompatActivity {
     private CadastroDAO dao;
     private  Cadastro cad = null;
 
+    String[] items = {"Onix Sedan", "Golf", "Jeep Renegage"};
+
+    AutoCompleteTextView autoCompleteTxt;
+
+    ArrayAdapter<String> adapteritems;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_cadastro);
+
+        autoCompleteTxt = findViewById(R.id.auto_complete_txt);
+
+        adapteritems = new ArrayAdapter<String>(this, R.layout.list_item, items);
+        autoCompleteTxt.setAdapter(adapteritems);
+        autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(), "item"+item,Toast.LENGTH_SHORT).show();
+            }
+        });
+
         //classes
         nome = findViewById(R.id.EditTxtName);
         telefone = findViewById(R.id.EditTxtTel);
         cpf = findViewById(R.id.EditTxtCPF);
-        modelo = findViewById(R.id.EditTxtModel);
         placa = findViewById(R.id.EditTxtPlaca);
         carroceria = findViewById(R.id.EditTxtCarroceri);
         cor = findViewById(R.id.EditTxtCo);
@@ -41,7 +64,7 @@ public class NewCadastro extends AppCompatActivity {
 
         Intent it = getIntent();
 
-        if(it.hasExtra("cadastro")){
+        if (it.hasExtra("cadastro")) {
             cad = (Cadastro) it.getSerializableExtra("cadastro");
             txtvtitle.setText("Atualizar Cadastro");
 
@@ -115,6 +138,9 @@ public class NewCadastro extends AppCompatActivity {
 
 
         }
-    }
 
-}
+            }
+        }
+
+
+
