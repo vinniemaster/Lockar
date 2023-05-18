@@ -8,6 +8,19 @@
     android:background="@color/dark_gray">
 
 
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="243dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/green"
+        android:onClick="ListarAgendamentos"
+        android:text="Agendamentos"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"

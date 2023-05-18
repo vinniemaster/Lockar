@@ -22,4 +22,9 @@ public class MainActivity extends AppCompatActivity {
         Intent it_list_cadastros = new Intent(this, ListarCadastros.class );
         startActivity(it_list_cadastros);
     }
+
+    public void ListarAgendamentos(View v){
+        Intent it_list_cadastros = new Intent(this, agendamentos.class );
+        startActivity(it_list_cadastros);
+    }
 }

@@ -18,7 +18,7 @@ public class ShowCadastro extends AppCompatActivity {
     private TextView cor;
     private CadastroDAO dao;
     private  Cadastro cad = null;
-
+    public int total = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
