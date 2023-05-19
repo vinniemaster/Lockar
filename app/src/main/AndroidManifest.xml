@@ -12,13 +12,22 @@
         android:theme="@style/Theme.Lockar"
         tools:targetApi="31">
         <activity
-            android:name=".ShowCadastro"
+            android:name=".Activities.Agendamentos.ShowAgendamento"
             android:exported="false" />
         <activity
-            android:name=".ListarCadastros"
+            android:name=".Activities.Agendamentos.NewAgendamento"
             android:exported="false" />
         <activity
-            android:name=".NewCadastro"
+            android:name=".Activities.Agendamentos.agendamentos"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Cadastros.ShowCadastro"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Cadastros.ListarCadastros"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Cadastros.NewCadastro"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

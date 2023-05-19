@@ -1,21 +1,23 @@
-package com.example.lockar;
+package com.example.lockar.Activities.Cadastros;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
-import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.lockar.Classes.Cadastro;
+import com.example.lockar.DAO.CadastroDAO;
+import com.example.lockar.MainActivity;
+import com.example.lockar.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,7 @@ public class ListarCadastros extends AppCompatActivity {
         listView = findViewById(R.id.lista_cadastros);
         dao = new CadastroDAO(this);
 
+
         cadastros = dao.GetALL();
 
         cadastrosFiltrados.addAll(cadastros);
@@ -47,7 +50,7 @@ public class ListarCadastros extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent,View view, int position, long id){
                 Cadastro cadshow = cadastros.get(position);
-                Intent it = new Intent(getApplicationContext(),ShowCadastro.class);
+                Intent it = new Intent(getApplicationContext(), ShowCadastro.class);
                 it.putExtra("cadastro", cadshow);
                 startActivity(it);
 
@@ -104,7 +107,7 @@ public class ListarCadastros extends AppCompatActivity {
 
         Cadastro cadatualizar = cadastros.get(menuinfo.position);
 
-        Intent it = new Intent(this,NewCadastro.class);
+        Intent it = new Intent(this, NewCadastro.class);
         it.putExtra("cadastro", cadatualizar);
         startActivity(it);
     }

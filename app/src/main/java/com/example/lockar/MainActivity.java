@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.lockar.Activities.Agendamentos.agendamentos;
+import com.example.lockar.Activities.Cadastros.ListarCadastros;
+import com.example.lockar.Activities.Cadastros.NewCadastro;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void ListarCadastros(View v){
         Intent it_list_cadastros = new Intent(this, ListarCadastros.class );
+        startActivity(it_list_cadastros);
+    }
+
+    public void ListarAgendamentos(View v){
+        Intent it_list_cadastros = new Intent(this, agendamentos.class );
         startActivity(it_list_cadastros);
     }
 }

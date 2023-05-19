@@ -1,9 +1,12 @@
-package com.example.lockar;
+package com.example.lockar.DAO;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.lockar.Classes.Cadastro;
+import com.example.lockar.Context.Conexao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +57,26 @@ public class CadastroDAO {
 
     public void excluir(Cadastro c){
         banco.delete("TB_CADASTRO","id = ?",new String[]{c.getId().toString()});
+    }
+
+    public Cadastro GetByID(Integer id){
+        Cadastro c = new Cadastro();
+        String selectQuery = "SELECT * FROM TB_CADASTRO WHERE Id = '"+id+"'";
+        Cursor cursor = banco.rawQuery(selectQuery, null);
+
+        while (cursor.moveToNext()){
+            c.setId(cursor.getInt(0));
+            c.setNome(cursor.getString(1));
+            c.setCPF(cursor.getString(2));
+            c.setTelefone(cursor.getString(3));
+            c.setModelo(cursor.getString(4));
+            c.setPlaca(cursor.getString(5));
+            c.setCarroceria(cursor.getString(6));
+            c.setCor(cursor.getString(7));
+        }
+
+        return c;
+
     }
 
     public long atualizar(Cadastro cad){

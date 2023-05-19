@@ -1,4 +1,4 @@
-package com.example.lockar;
+package com.example.lockar.Activities.Cadastros;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,12 +7,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.lockar.Classes.Cadastro;
+import com.example.lockar.DAO.CadastroDAO;
+import com.example.lockar.MainActivity;
+import com.example.lockar.R;
 
 public class NewCadastro extends AppCompatActivity {
     private TextView txtvtitle;
@@ -24,7 +28,7 @@ public class NewCadastro extends AppCompatActivity {
     private EditText carroceria;
     private EditText cor;
     private CadastroDAO dao;
-    private  Cadastro cad = null;
+    private Cadastro cad = null;
 
     String[] items = {"Onix Sedan", "Golf", "Jeep Renegage"};
 
@@ -71,7 +75,7 @@ public class NewCadastro extends AppCompatActivity {
             nome.setText(cad.getNome().toString());
             telefone.setText(cad.getTelefone().toString());
             cpf.setText(cad.getCPF().toString());
-            modelo.setText(cad.getModelo().toString());
+            autoCompleteTxt.setText(cad.getModelo());
             placa.setText(cad.getPlaca().toString());
             carroceria.setText(cad.getCarroceria().toString());
             cor.setText(cad.getCor().toString());
@@ -90,7 +94,7 @@ public class NewCadastro extends AppCompatActivity {
             c.setNome(nome.getText().toString());
             c.setCPF(cpf.getText().toString());
             c.setTelefone(telefone.getText().toString());
-            c.setModelo(modelo.getText().toString());
+            c.setModelo(autoCompleteTxt.getText().toString());
             c.setPlaca(placa.getText().toString());
             c.setCarroceria(carroceria.getText().toString());
             c.setCor(cor.getText().toString());
@@ -108,7 +112,7 @@ public class NewCadastro extends AppCompatActivity {
             nome.setText("");
             cpf.setText("");
             telefone.setText("");
-            modelo.setText("");
+            autoCompleteTxt.setText("");
             placa.setText("");
             carroceria.setText("");
             cor.setText("");
@@ -120,7 +124,7 @@ public class NewCadastro extends AppCompatActivity {
             c.setNome(nome.getText().toString());
             c.setCPF(cpf.getText().toString());
             c.setTelefone(telefone.getText().toString());
-            c.setModelo(modelo.getText().toString());
+            c.setModelo(autoCompleteTxt.getText().toString());
             c.setPlaca(placa.getText().toString());
             c.setCarroceria(carroceria.getText().toString());
             c.setCor(cor.getText().toString());

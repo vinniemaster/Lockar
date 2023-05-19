@@ -1,4 +1,4 @@
-package com.example.lockar;
+package com.example.lockar.Context;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,6 +17,9 @@ public class Conexao extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db){
         db.execSQL("CREATE TABLE TB_CADASTRO(Id integer primary key autoincrement," +
                 "Nome varchar(50), CPF varchar(20), Telefone varchar(20), Modelo varchar(50), Placa varchar(50), Carroceria varchar(50), Cor varchar(50) )");
+
+        db.execSQL("CREATE TABLE TB_AGENDAMENTOS(Id integer primary key autoincrement," +
+                "cadastroId integer, datahr_inicio datetime, datahr_fim datetime )");
     }
 
     @Override

@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_gray"
-    tools:context=".ListarCadastros">
+    tools:context=".Activities.Cadastros.ListarCadastros">
 
     <Button
         android:id="@+id/button6"
         android:layout_width="213dp"
         android:layout_height="47dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="@color/green"
         android:onClick="backtohome"
         android:text="Voltar "
@@ -22,8 +22,8 @@
 
     <ListView
         android:id="@+id/lista_cadastros"
-        android:layout_width="407dp"
-        android:layout_height="596dp"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
         android:layout_marginTop="24dp"
         android:divider="#FFFFFF"
         android:dividerHeight="1dp"
