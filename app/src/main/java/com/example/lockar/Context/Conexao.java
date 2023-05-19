@@ -1,4 +1,4 @@
-package com.example.lockar;
+package com.example.lockar.Context;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

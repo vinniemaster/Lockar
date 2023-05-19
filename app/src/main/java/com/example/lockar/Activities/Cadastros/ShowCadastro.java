@@ -1,12 +1,16 @@
-package com.example.lockar;
+package com.example.lockar.Activities.Cadastros;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.lockar.Activities.Cadastros.ListarCadastros;
+import com.example.lockar.Classes.Cadastro;
+import com.example.lockar.DAO.CadastroDAO;
+import com.example.lockar.R;
 
 public class ShowCadastro extends AppCompatActivity {
     private TextView nome;
@@ -17,7 +21,7 @@ public class ShowCadastro extends AppCompatActivity {
     private TextView carroceria;
     private TextView cor;
     private CadastroDAO dao;
-    private  Cadastro cad = null;
+    private Cadastro cad = null;
     public int total = 0;
 
     @Override

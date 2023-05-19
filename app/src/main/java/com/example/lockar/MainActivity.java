@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.lockar.Activities.Agendamentos.agendamentos;
+import com.example.lockar.Activities.Cadastros.ListarCadastros;
+import com.example.lockar.Activities.Cadastros.NewCadastro;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

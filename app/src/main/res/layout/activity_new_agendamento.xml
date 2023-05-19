@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_gray"
-    tools:context=".NewAgendamento">
+    tools:context=".Activities.Agendamentos.NewAgendamento">
 
     <TextView
         android:id="@+id/textView33"
@@ -105,7 +105,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="49dp"
         android:backgroundTint="@color/green"
-        android:onClick="Salvar"
+        android:onClick="SalvarAgendamento"
         android:text="Cadastrar"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

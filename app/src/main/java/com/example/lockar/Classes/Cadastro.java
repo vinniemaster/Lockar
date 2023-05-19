@@ -1,4 +1,4 @@
-package com.example.lockar;
+package com.example.lockar.Classes;
 
 import java.io.Serializable;
 
