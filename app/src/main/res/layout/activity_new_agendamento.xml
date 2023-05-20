@@ -8,6 +8,43 @@
     tools:context=".Activities.Agendamentos.NewAgendamento">
 
     <TextView
+        android:id="@+id/textView17"
+        android:layout_width="143dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="56dp"
+        android:fontFamily="monospace"
+        android:text="kar"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:textSize="75sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="144dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="68dp"
+        android:fontFamily="monospace"
+        android:text="Loc"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="75dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
         android:id="@+id/textView33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -129,7 +166,7 @@
         android:id="@+id/textViewTitle2"
         android:layout_width="317dp"
         android:layout_height="38dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="monospace"
         android:text="Novo Agendamento"
         android:textAlignment="center"
@@ -137,7 +174,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView31"
