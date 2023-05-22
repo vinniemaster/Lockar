@@ -25,8 +25,8 @@ public class NewCadastro extends AppCompatActivity {
     private EditText cpf;
     private EditText modelo;
     private EditText placa;
-    private EditText carroceria;
-    private EditText cor;
+   // private EditText carroceria;
+   // private EditText cor;
     private CadastroDAO dao;
     private Cadastro cad = null;
 
@@ -58,8 +58,6 @@ public class NewCadastro extends AppCompatActivity {
         telefone = findViewById(R.id.EditTxtTel);
         cpf = findViewById(R.id.EditTxtCPF);
         placa = findViewById(R.id.EditTxtPlaca);
-        carroceria = findViewById(R.id.EditTxtCarroceri);
-        cor = findViewById(R.id.EditTxtCo);
         //DBs
         dao = new CadastroDAO(this);
         //textViews
@@ -77,8 +75,8 @@ public class NewCadastro extends AppCompatActivity {
             cpf.setText(cad.getCPF().toString());
             autoCompleteTxt.setText(cad.getModelo());
             placa.setText(cad.getPlaca().toString());
-            carroceria.setText(cad.getCarroceria().toString());
-            cor.setText(cad.getCor().toString());
+            //carroceria.setText(cad.getCarroceria().toString());
+            //cor.setText(cad.getCor().toString());
 
         }
 
@@ -96,8 +94,8 @@ public class NewCadastro extends AppCompatActivity {
             c.setTelefone(telefone.getText().toString());
             c.setModelo(autoCompleteTxt.getText().toString());
             c.setPlaca(placa.getText().toString());
-            c.setCarroceria(carroceria.getText().toString());
-            c.setCor(cor.getText().toString());
+           // c.setCarroceria(carroceria.getText().toString());
+           // c.setCor(cor.getText().toString());
 
 
             long id = dao.inserir(c);
@@ -114,8 +112,8 @@ public class NewCadastro extends AppCompatActivity {
             telefone.setText("");
             autoCompleteTxt.setText("");
             placa.setText("");
-            carroceria.setText("");
-            cor.setText("");
+           // carroceria.setText("");
+           // cor.setText("");
         }
         else{
 
@@ -126,8 +124,8 @@ public class NewCadastro extends AppCompatActivity {
             c.setTelefone(telefone.getText().toString());
             c.setModelo(autoCompleteTxt.getText().toString());
             c.setPlaca(placa.getText().toString());
-            c.setCarroceria(carroceria.getText().toString());
-            c.setCor(cor.getText().toString());
+           // c.setCarroceria(carroceria.getText().toString());
+           // c.setCor(cor.getText().toString());
 
 
             long id = dao.atualizar(c);

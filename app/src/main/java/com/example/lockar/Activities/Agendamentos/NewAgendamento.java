@@ -10,11 +10,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.example.lockar.Classes.Agendamento;
 import com.example.lockar.DAO.AgendamentosDAO;
@@ -39,6 +43,12 @@ public class NewAgendamento extends AppCompatActivity {
     Agendamento agen;
     private AgendamentosDAO dao;
 
+    String[] agd = {"1", "2", "3"};
+
+    AutoCompleteTextView autoCompleteAgd;
+
+    ArrayAdapter<String> adapteragd;
+
     DatePickerDialog datePickDialog;
 
     TimePickerDialog timePickerDialog;
@@ -46,8 +56,22 @@ public class NewAgendamento extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_agendamento);
+
+        autoCompleteAgd = findViewById(R.id.auto_complete_agd);
+
+        adapteragd = new ArrayAdapter<String>(this, R.layout.list_item, agd);
+        autoCompleteAgd.setAdapter(adapteragd);
+        autoCompleteAgd.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String agendamentos = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(), "Agendamentos"+agendamentos,Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         dao = new AgendamentosDAO(this);
-        cadastroId = findViewById(R.id.editTxtCadastroId5);
+        cadastroId = findViewById(R.id.auto_complete_agd);
         DtInicio = findViewById(R.id.textView31);
         DtFim = findViewById(R.id.textView33);
         HrInicio = findViewById(R.id.textView32);

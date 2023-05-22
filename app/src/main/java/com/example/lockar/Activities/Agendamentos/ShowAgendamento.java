@@ -26,7 +26,7 @@ public class ShowAgendamento extends AppCompatActivity {
     private TextView cpf;
     private TextView modelo;
     private TextView placa;
-    private TextView cor;
+    //private TextView cor;
 
     private TextView DtInicio;
     private TextView DtFim;
@@ -47,7 +47,7 @@ public class ShowAgendamento extends AppCompatActivity {
         telefone = findViewById(R.id.textViewAgendamentoTelefone);
         cpf = findViewById(R.id.textViewAgendamentoCPF);
         placa = findViewById(R.id.textViewAgendamentoPlaca);
-//        cor = findViewById(R.id.textViewAgendamentoCor);
+        // cor = findViewById(R.id.textViewAgendamentoCor);
         modelo = findViewById(R.id.textViewAgendamentoModelo);
         DtInicio = findViewById(R.id.textViewAgendamentoDTInicio);
         DtFim = findViewById(R.id.textViewAgendamentoDtFim);
