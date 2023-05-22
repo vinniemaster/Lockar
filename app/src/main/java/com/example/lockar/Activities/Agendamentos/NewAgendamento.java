@@ -21,16 +21,21 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.lockar.Classes.Agendamento;
+import com.example.lockar.Classes.Cadastro;
 import com.example.lockar.DAO.AgendamentosDAO;
+import com.example.lockar.DAO.CadastroDAO;
 import com.example.lockar.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class NewAgendamento extends AppCompatActivity {
     EditText cadastroId;
+    Integer idcadastroSelected;
     TextView DtInicio;
     TextView DtFim;
 
@@ -43,11 +48,12 @@ public class NewAgendamento extends AppCompatActivity {
     Agendamento agen;
     private AgendamentosDAO dao;
 
-    String[] agd = {"1", "2", "3"};
+    private CadastroDAO cadDao;
+
 
     AutoCompleteTextView autoCompleteAgd;
 
-    ArrayAdapter<String> adapteragd;
+    ArrayAdapter<Cadastro> adapteragd;
 
     DatePickerDialog datePickDialog;
 
@@ -57,18 +63,6 @@ public class NewAgendamento extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_agendamento);
 
-        autoCompleteAgd = findViewById(R.id.auto_complete_agd);
-
-        adapteragd = new ArrayAdapter<String>(this, R.layout.list_item, agd);
-        autoCompleteAgd.setAdapter(adapteragd);
-        autoCompleteAgd.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String agendamentos = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(), "Agendamentos"+agendamentos,Toast.LENGTH_SHORT).show();
-            }
-        });
-
 
         dao = new AgendamentosDAO(this);
         cadastroId = findViewById(R.id.auto_complete_agd);
@@ -77,9 +71,16 @@ public class NewAgendamento extends AppCompatActivity {
         HrInicio = findViewById(R.id.textView32);
         HrFim = findViewById(R.id.textView34);
 
+
+
+
+
+
         Intent it = getIntent();
 
         if(it.hasExtra("agID")){
+
+
             title = findViewById(R.id.textViewTitle2);
             btn = findViewById(R.id.button9);
 
@@ -88,7 +89,13 @@ public class NewAgendamento extends AppCompatActivity {
             String agId = it.getStringExtra("agID");
             agen = dao.GetByID(Integer.parseInt(agId));
 
-            cadastroId.setText(agen.getCadastroId().toString());
+            cadDao = new CadastroDAO(this);
+            Cadastro agd  = cadDao.GetByID(agen.getCadastroId());
+            idcadastroSelected = agd.getId();
+            cadastroId.setText(agd.getNome()+","+agd.getModelo());
+
+
+
             Date dtinicio = agen.getDatahr_inicio();
             Date dtfim = agen.getDatahr_fim();
             SimpleDateFormat getDate = new SimpleDateFormat("dd-MM-yyyy ");
@@ -112,7 +119,6 @@ public class NewAgendamento extends AppCompatActivity {
                     },dtinicio.getYear(),dtinicio.getMonth(),dtinicio.getDay());
                     datePickDialog.show();
                 }
-
             });
 
             HrInicio.setOnClickListener(new View.OnClickListener() {
@@ -159,6 +165,22 @@ public class NewAgendamento extends AppCompatActivity {
             });
         }
         else{
+            autoCompleteAgd = findViewById(R.id.auto_complete_agd);
+            cadDao = new CadastroDAO(this);
+            List<Cadastro> agd  = cadDao.GetALL();
+
+
+
+            adapteragd = new ArrayAdapter<Cadastro>(this, R.layout.list_item, agd);
+            autoCompleteAgd.setAdapter(adapteragd);
+            autoCompleteAgd.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Cadastro cad = agd.get(position);
+                    idcadastroSelected = cad.getId();
+                }
+            });
+
             Calendar c = Calendar.getInstance();
 
             final int day = c.get(Calendar.DAY_OF_MONTH);
@@ -240,7 +262,7 @@ public class NewAgendamento extends AppCompatActivity {
             dao = new AgendamentosDAO(this);
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
             Agendamento a = new Agendamento();
-            a.setCadastroId(Integer.parseInt(cadastroId.getText().toString()));
+            a.setCadastroId(idcadastroSelected);
             try {
                 String date = DtInicio.getText().toString().replace("/","-") + " " + HrInicio.getText().toString() ;
                 a.setDatahr_inicio(simpleDateFormat.parse(date));
@@ -273,7 +295,7 @@ public class NewAgendamento extends AppCompatActivity {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
             Agendamento a = new Agendamento();
             a.setId(agen.getId());
-            a.setCadastroId(Integer.parseInt(cadastroId.getText().toString()));
+            a.setCadastroId(idcadastroSelected);
             try {
                 String date = DtInicio.getText().toString().replace("/","-") + " " + HrInicio.getText().toString() ;
                 a.setDatahr_inicio(simpleDateFormat.parse(date));

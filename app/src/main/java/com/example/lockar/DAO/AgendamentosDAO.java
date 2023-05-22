@@ -111,7 +111,7 @@ public class AgendamentosDAO {
         SimpleDateFormat inputFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy");
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         ContentValues values = new ContentValues();
-        values.put("cadastroId", agen.getId());
+        values.put("cadastroId", agen.getCadastroId());
         try {
             Date date = inputFormat.parse(agen.getDatahr_inicio().toString());
             values.put("datahr_inicio", simpleDateFormat.format(date));
