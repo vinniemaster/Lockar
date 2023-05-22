@@ -32,7 +32,7 @@
         android:id="@+id/textView28"
         android:layout_width="144dp"
         android:layout_height="88dp"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="34dp"
         android:layout_marginBottom="48dp"
         android:fontFamily="monospace"
@@ -44,7 +44,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:layout_constraintVertical_bias="0.505" />
 
     <Button
         android:id="@+id/button10"
@@ -75,8 +76,8 @@
 
     <ListView
         android:id="@+id/listAgendamentos"
-        android:layout_width="398dp"
-        android:layout_height="435dp"
+        android:layout_width="400dp"
+        android:layout_height="346dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button8" />

@@ -5,14 +5,167 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_gray"
+    android:scrollbarSize="20dp"
+    android:visibility="visible"
     tools:context=".Activities.Agendamentos.ShowAgendamento">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_gray"
+        android:scrollbarSize="20dp"
+        android:visibility="visible"
+        tools:context=".Activities.Agendamentos.ShowAgendamento">
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="143dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="52dp"
+            android:fontFamily="monospace"
+            android:text="kar"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="75sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.057" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="144dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="56dp"
+            android:fontFamily="monospace"
+            android:text="Loc"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="75dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.055" />
+
+        <View
+            android:id="@+id/divider24"
+            android:layout_width="409dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/divider25"
+            android:layout_width="409dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="82dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/divider26"
+            android:layout_width="409dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="119dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/divider28"
+            android:layout_width="409dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="154dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/divider29"
+            android:layout_width="409dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/divider30"
+            android:layout_width="409dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="227dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/divider31"
+            android:layout_width="409dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="264dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/divider33"
+            android:layout_width="409dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView27"
         android:layout_width="143dp"
         android:layout_height="87dp"
         android:layout_marginStart="3dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="52dp"
         android:fontFamily="monospace"
         android:text="kar"
         android:textAlignment="center"
@@ -25,13 +178,13 @@
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="144dp"
         android:layout_height="88dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="56dp"
         android:fontFamily="monospace"
         android:text="Loc"
         android:textAlignment="center"
@@ -42,7 +195,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintVertical_bias="0.055" />
 
     <Button
         android:id="@+id/button13"
@@ -61,9 +214,10 @@
         android:id="@+id/textViewAgendamentoStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,9 +227,10 @@
         android:id="@+id/textViewAgendamentoName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +243,7 @@
         android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,11 +253,12 @@
         android:id="@+id/textViewAgendamentoTelefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAgendamentoPlaca" />
 
@@ -109,9 +266,10 @@
         android:id="@+id/textViewAgendamentoDtFim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,9 +279,10 @@
         android:id="@+id/textViewAgendamentoDTInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,9 +292,10 @@
         android:id="@+id/textViewAgendamentoModelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,11 +305,11 @@
         android:id="@+id/textViewAgendamentoCPF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAgendamentoName" />
 
@@ -157,9 +317,10 @@
         android:id="@+id/textViewAgendamentoCor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="@color/green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"

@@ -65,7 +65,6 @@ public class NewAgendamento extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String agendamentos = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(), "Agendamentos"+agendamentos,Toast.LENGTH_SHORT).show();
             }
         });
 
