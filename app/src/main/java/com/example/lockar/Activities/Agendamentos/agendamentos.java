@@ -53,22 +53,9 @@ public class agendamentos extends AppCompatActivity {
 
         Calendar c = Calendar.getInstance();
 
-        final int day = c.get(Calendar.DAY_OF_MONTH);
-        final int month = c.get(Calendar.MONTH);
-        final int year = c.get(Calendar.YEAR);
-        final int hour = c.get(Calendar.HOUR_OF_DAY);
-        final int minute = c.get(Calendar.MINUTE);
-        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        SimpleDateFormat outputFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy");
-        String datestr = year + "-"+ month + "-" + day + " " + hour + ":" + minute;
-        Date datetoday;
-        try {
-            Date datedbformat = inputFormat.parse(datestr);
-            datetoday = outputFormat.parse(datedbformat.toString());
+        Date datetoday = c.getTime();
 
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
+
 
 
         for(Agendamento a: agendamentos){

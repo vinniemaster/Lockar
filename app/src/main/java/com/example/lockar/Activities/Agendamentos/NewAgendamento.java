@@ -105,6 +105,11 @@ public class NewAgendamento extends AppCompatActivity {
             DtFim.setText(getDate.format(dtfim).replace("-","/"));
             HrFim.setText(getHour.format(dtfim));
 
+            java.text.SimpleDateFormat yearformat = new java.text.SimpleDateFormat("YYYY");
+            final int yearinicio = Integer.parseInt(yearformat.format(dtinicio.getTime()));
+            final int yearfim = Integer.parseInt(yearformat.format(dtfim.getTime()));
+
+
             Calendar c = Calendar.getInstance();
             Date datetoday = c.getTime();
             DtInicio.setOnClickListener(new View.OnClickListener() {
@@ -116,7 +121,7 @@ public class NewAgendamento extends AppCompatActivity {
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                             DtInicio.setText(day+"/"+month+"/"+year);
                         }
-                    },dtinicio.getYear(),dtinicio.getMonth(),dtinicio.getDay());
+                    },yearinicio,dtinicio.getMonth(),dtinicio.getDate());
                     datePickDialog.show();
                 }
             });
@@ -144,7 +149,7 @@ public class NewAgendamento extends AppCompatActivity {
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                             DtFim.setText(day+"/"+month+"/"+year);
                         }
-                    },dtfim.getYear(),dtfim.getMonth(),dtfim.getDay());
+                    },yearfim,dtfim.getMonth(),dtfim.getDate());
                     datePickDialog.show();
                 }
 
@@ -183,8 +188,11 @@ public class NewAgendamento extends AppCompatActivity {
 
             Calendar c = Calendar.getInstance();
 
-            final int day = c.get(Calendar.DAY_OF_MONTH);
-            final int month = c.get(Calendar.MONTH);
+            java.text.SimpleDateFormat monthformat = new java.text.SimpleDateFormat("MM");
+
+
+            final int day = c.get(Calendar.DATE);
+            final int month = Integer.parseInt(monthformat.format(c.getTime()));
             final int year = c.get(Calendar.YEAR);
             final int hour = c.get(Calendar.HOUR_OF_DAY);
             final int minute = c.get(Calendar.MINUTE);
@@ -203,7 +211,7 @@ public class NewAgendamento extends AppCompatActivity {
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                             DtInicio.setText(day+"/"+month+"/"+year);
                         }
-                    },year,month,day);
+                    },year,month-1,day);
                     datePickDialog.show();
                 }
 
@@ -232,7 +240,7 @@ public class NewAgendamento extends AppCompatActivity {
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                             DtFim.setText(day+"/"+month+"/"+year);
                         }
-                    },year,month,day);
+                    },year,month-1,day);
                     datePickDialog.show();
                 }
 

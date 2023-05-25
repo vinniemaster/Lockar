@@ -79,6 +79,6 @@ public class Cadastro implements Serializable {
 
     @Override
     public String toString(){
-        return Nome + ", " + Modelo + ", "+ Cor;
+        return Nome + ", " + Modelo;
     }
 }
