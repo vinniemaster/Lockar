@@ -11,54 +11,14 @@
         android:id="@+id/button4"
         android:layout_width="243dp"
         android:layout_height="47dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="@color/green"
         android:onClick="backtolist"
         android:text="Voltar para Lista"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCor" />
-
-    <TextView
-        android:id="@+id/textViewCor"
-        android:layout_width="148dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="8dp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="24dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="132dp"
-        android:text="Cor"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCarroce" />
-
-    <TextView
-        android:id="@+id/textViewCarroce"
-        android:layout_width="148dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="8dp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="92dp"
-        android:text="Carroceria"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPlaca" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewModel" />
 
     <TextView
         android:id="@+id/textViewPlaca"
@@ -232,8 +192,8 @@
 
     <View
         android:id="@+id/divider4"
-        android:layout_width="5dp"
-        android:layout_height="185dp"
+        android:layout_width="13dp"
+        android:layout_height="63dp"
         android:layout_marginTop="28dp"
         android:background="?android:attr/listDivider"
         android:backgroundTint="#FFFFFF"
