@@ -119,6 +119,7 @@ public class NewAgendamento extends AppCompatActivity {
                     datePickDialog = new DatePickerDialog(NewAgendamento.this, new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                            month = month +1;
                             DtInicio.setText(day+"/"+month+"/"+year);
                         }
                     },yearinicio,dtinicio.getMonth(),dtinicio.getDate());
@@ -147,6 +148,7 @@ public class NewAgendamento extends AppCompatActivity {
                     datePickDialog = new DatePickerDialog(NewAgendamento.this, new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                            month = month +1;
                             DtFim.setText(day+"/"+month+"/"+year);
                         }
                     },yearfim,dtfim.getMonth(),dtfim.getDate());
@@ -209,6 +211,7 @@ public class NewAgendamento extends AppCompatActivity {
                     datePickDialog = new DatePickerDialog(NewAgendamento.this, new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                            month = month +1;
                             DtInicio.setText(day+"/"+month+"/"+year);
                         }
                     },year,month-1,day);
@@ -238,6 +241,7 @@ public class NewAgendamento extends AppCompatActivity {
                     datePickDialog = new DatePickerDialog(NewAgendamento.this, new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                            month = month +1;
                             DtFim.setText(day+"/"+month+"/"+year);
                         }
                     },year,month-1,day);
